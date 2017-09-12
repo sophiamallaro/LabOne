@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {background-color: powderblue;text-align: center;line-height: 1.4;}
+    </style>
+    <meta charset="UTF-8">
+    <title>Temperature Reader</title>
+    <div style='float: right;'><a href="../index.php">Home</a></div>
+</head>
+<body>
+<h1>Add an aircraft</h1>
+<form action="../includes/process_aircraftAdd.php" method="post"
+      name="aircraft_form" onsubmit="return validateForm()"id="aircraft_form">
+    Model: <input type="text" name="model" /><br>
+    Econony Capacity: <input type="number"
+                             name="econCapacity"
+                             min="1"
+                             max="1000"/><br>
+    First Class Capacity: <input type="number"
+                                 name="firstClassCapacity"
+                                 min="1"
+                                 max="1000"/><br>
+    <input type="submit"
+           value="Apply" />
+</form>
+
+</body>
+</html>
