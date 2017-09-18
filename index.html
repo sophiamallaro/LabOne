@@ -3,7 +3,18 @@
 <head>
 </head>
 <body>
-<canvas id="myChart" width="400" height="400"></canvas>
+<style>
+    body {
+        background-color: lightblue;
+    }
+</style>
+<canvas id="chart" width="200" height="400"></canvas>
+Phone Number: <input type="text" name="model" /><br>
+Carrier: <select>
+    <option value="verizon">Verizon</option>
+    <option value="uscell">US Cellular</option>
+</select><br>
+<button type="button">Button</button>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
