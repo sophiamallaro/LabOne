@@ -31,6 +31,7 @@ var myChart = new Chart(ctx, {
 });
 
 function addData(time, temp) {
+    //myChart.data.labels.push(label);
     myChart.data.datasets[0].data.push({x: time, y: temp});
     myChart.update();
 }
