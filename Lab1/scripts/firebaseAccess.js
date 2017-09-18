@@ -9,7 +9,10 @@ var config = {
 };
 firebase.initializeApp(config);
 
-var bigOne = document.getElementById('bigOne');
-var dbRef = firebase.database().ref().child('text');
-dbRef.on('value', snap => bigOne.innerText = snap.val());
+var dbRef = firebase.database().ref().child('Temperatures');
+const chart = document.getElementById('myChart');
+
+dbRef.on('child_added', function(data) {
+    addData(data.key, data.val());
+});
 
