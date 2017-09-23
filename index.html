@@ -3,28 +3,23 @@
 <head>
 </head>
 <body>
-<style>
-    body {
-        background-color: lightblue;
-    }
-</style>
-<canvas id="chart" width="200" height="400"></canvas>
-Phone Number: <input type="text" name="model" /><br>
-Carrier: <select>
-    <option value="verizon">Verizon</option>
-    <option value="uscell">US Cellular</option>
-</select><br>
-<button onclick="myFunction()">Send Text</button>
-
+    <style>
+        body {
+            background-color: lightblue;
+        }
+    </style>
+    <canvas id="myChart" width="200" height="400"></canvas>
+    Phone Number: <input type="text" name="model" /><br>
+    Carrier: <select>
+        <option value="verizon">Verizon</option>
+        <option value="uscell">US Cellular</option>
+        <option value="att">AT&T</option>
+    </select><br>
+    <button type="button">Button</button>
 </body>
-<script>
-    function myFunction() {
-
-    }
-</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
-<script src="Lab1/Chart.js"></script>
-<script>
-    addData();
-</script>
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase-database.js"></script>
+<script src="Lab1/scripts/Chart.js"></script>
+<script src="Lab1/scripts/firebaseAccess.js"></script>
 </html>

@@ -1,7 +1,8 @@
-var ctx = document.getElementById("chart").getContext('2d');
+const ctx = document.getElementById("myChart").getContext('2d');
 var myChart = new Chart(ctx, {
-    type: 'scatter',
+    type: 'line',
     data: {
+        labels: ['0'],
         datasets: [{
             label: 'Temperature',
             data: [{
@@ -11,7 +12,6 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
-        responsive: true,
         maintainAspectRatio: false,
         title: {
             display: true,
@@ -23,14 +23,15 @@ var myChart = new Chart(ctx, {
                 position: 'bottom'
             }],
             yAxes: [{
-                max: 50,
                 scaleStartValue: 10,
-            }],
+                max: 50
+            }]
         }
-    },
+    }
 });
 
-function addData() {
-    myChart.data.datasets[0].data[myChart.data.datasets[0].data.length] = {x: 8, y: 50};
+function addData(time, temp) {
+    //myChart.data.labels.push(label);
+    myChart.data.datasets[0].data.push({x: time, y: temp});
     myChart.update();
 }
