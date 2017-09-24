@@ -12,7 +12,7 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
         title: {
             display: true,
             text: "Temperature Over Time"
@@ -31,7 +31,11 @@ var myChart = new Chart(ctx, {
 });
 
 function addData(time, temp) {
-    //myChart.data.labels.push(label);
-    myChart.data.datasets[0].data.push({x: time, y: temp});
+    if(temp == 0xDEADBEEF)
+    {
+        myChart.data.datasets[0].data.push({x:time, y:null});
+    } else {
+        myChart.data.datasets[0].data.push({x: time, y: temp});
+    }
     myChart.update();
 }

@@ -13,6 +13,9 @@ var dbRef = firebase.database().ref().child('Temperatures');
 const chart = document.getElementById('myChart');
 
 dbRef.on('child_added', function(data) {
-    addData(data.key, data.val());
+    addData(data.key, parseFloat(data.val()));
 });
 
+dbRef.on('child_changed', function(data) {
+    addData(data.key, parseFloat(data.val()));
+});

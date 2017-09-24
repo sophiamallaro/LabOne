@@ -8,14 +8,19 @@
             background-color: lightblue;
         }
     </style>
-    <canvas id="myChart" width="200" height="400"></canvas>
-    Phone Number: <input type="text" name="model" /><br>
-    Carrier: <select>
-        <option value="verizon">Verizon</option>
-        <option value="uscell">US Cellular</option>
-        <option value="att">AT&T</option>
-    </select><br>
-    <button type="button">Button</button>
+    <div id="chart">
+        <canvas id="myChart" width="400" height="200" style="border:1px #000000 solid"></canvas>
+    </div>
+    <div id="ui">
+        <button id="activate" type="button">Activate Sensor</button><br>
+        Phone Number: <input type="text" name="model" /><br>
+        Carrier: <select>
+            <option value="verizon">Verizon</option>
+            <option value="uscell">US Cellular</option>
+            <option value="att">AT&T</option>
+        </select><br>
+        <button id="textMsg" type="button">Send Text Message</button>
+    </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
