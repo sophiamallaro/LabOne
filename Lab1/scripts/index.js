@@ -12,6 +12,7 @@ function onActivateButtonClick() {
         button.innerText = "Deactivate Sensor";
     } else if (button.innerText == "Deactivate Sensor") {
         deactivateSensor();
+        alert("hi");
         button.innerText = "Activate Sensor";
     }
 }
