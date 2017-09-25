@@ -10,7 +10,6 @@ var config = {
 firebase.initializeApp(config);
 
 var dbRef = firebase.database().ref().child('Temperatures');
-const chart = document.getElementById('myChart');
 
 dbRef.on('child_added', function(data) {
     addData(data.key, parseFloat(data.val()));
@@ -19,3 +18,11 @@ dbRef.on('child_added', function(data) {
 dbRef.on('child_changed', function(data) {
     addData(data.key, parseFloat(data.val()));
 });
+
+function activateSensor() {
+    firebase.database().ref().child("Button").set(1);
+}
+
+function deactivateSensor() {
+    firebase.database().ref().child("Button").set(0);
+}
