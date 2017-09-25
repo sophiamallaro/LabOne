@@ -36,6 +36,10 @@
                 var email = phoneNumber + "@messaging.sprintpcs.com";
             }
         }
+        <?php
+            $tmp = exec("py.py");
+            echo $tmp;
+        ?>
     </script>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
